@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background-color: #dadada;
+}
+
+
+.card {
+    border-radius: 5px solid #000;
+    margin-top: 80px;
+    width: 16rem;
+    height: 21rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(196, 36, 8, 0.9);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Animation styles */
+@keyframes shadow-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 128, .9);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 128, .9);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 128, .9);
+    }
+}
+
+/* Add a class to trigger the animation on hover, click, or other events */
+.card:hover {
+    animation: shadow-glow 1s infinite;
+    /* Change the duration to control the speed */
+}
+
+h1 {
+    margin-top: 5px;
+    width: 100%;
+    padding: 7px 8px;
+    /* background: #FAF3F0; */
+    /* background-color: #09058084; */
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card .card-body {
+    width: 100%;
+    gap: 10;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 1px 10px;
+    outline: none;
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    caret-color: blue;
+}
+
+
+.btn {
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    padding: 0px 10px;
+    font-size: 22px;
+    font-weight: bolder;
+    background-color: #FFD966;
+    margin-left: 9px;
+    border-radius: 5px solid #000;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.btn:hover {
+    transform: rotate(90deg);
+    background-color: #F2EE9D;
+    font-size: 28px;
+    /* Rotate the icon 360 degrees on hover */
+}
+
+
+li {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px 4px;
+    font-size: 18px;
+    letter-spacing: 2.1px;
+    color: rgba(0, 0, 0, 0.616);
+    text-transform: capitalize;
+}
+
+.todo-style {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-style > #close {
+
+    width: 30px;
+    height: 30px;
+    font-size: 28px;
+    border-radius: 50%;
+    color: #888;
+    background: #FFD966;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, .3);
+}
+
+.todo-style #close:hover {
+    background: #FF6666;
+    color: red;
+}
+
+
+hr {
+    height: 3.2px;
+    width: 90%;
+    padding: 5px 7px;
+    color: #22211c;
+}
+
+
+/* Styles for mobile devices (up to 767px width) */
+@media (max-width: 767px) {
+
+    /* Your CSS styles for mobile devices go here */
+    body {
+        font-size: 16px;
+        /* Adjust the font size for better readability on smaller screens */
+    }
+
+    /* Example: Hide an element on mobile */
+    .hide-on-mobile {
+        display: none;
+    }
+
+    /* Example: Make an element full width on mobile */
+    .full-width-on-mobile {
+        width: 100%;
+    }
+}
